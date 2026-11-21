@@ -1,0 +1,25 @@
+body:has(.adm){margin:0;background:#F4F6F8}
+.adm{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#15202B;min-height:100vh}
+.adm *{box-sizing:border-box}
+.adm header{background:#000;color:#fff;padding:14px 24px;display:flex;justify-content:space-between;align-items:center}
+.adm header a,.adm header button{color:#fff;background:none;border:0;font:inherit;cursor:pointer;text-decoration:underline}
+.adm main{max-width:1280px;margin:0 auto;padding:24px}
+.adm .box{background:#fff;border:1px solid #DDE3EA;border-radius:12px;padding:24px;max-width:420px;margin:48px auto;display:flex;flex-direction:column;gap:14px}
+.adm label{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600}
+.adm input,.adm select,.adm textarea{font:inherit;padding:9px 10px;border:1px solid #C5CED8;border-radius:8px;background:#fff}
+.adm button.go{background:#000;color:#fff;border:0;border-radius:8px;padding:11px 16px;font:inherit;font-weight:600;cursor:pointer}
+.adm .err{background:#FDECEC;color:#8A1C24;padding:10px 12px;border-radius:8px;font-size:14px}
+.adm .note{background:#FFF7E0;color:#6B4E00;padding:10px 12px;border-radius:8px;font-size:14px}
+.adm code{background:#EEF1F4;padding:2px 6px;border-radius:4px;font-size:15px;word-break:break-all}
+.adm .tabs{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.adm .tabs a{padding:8px 14px;border-radius:999px;border:1px solid #C5CED8;text-decoration:none;color:#15202B;background:#fff;font-size:14px}
+.adm .tabs a.on{background:#000;color:#fff;border-color:#000}
+.adm .lead{background:#fff;border:1px solid #DDE3EA;border-radius:12px;padding:16px;margin-bottom:12px;display:grid;grid-template-columns:1.2fr 1fr 1.3fr;gap:16px}
+.adm .lead h3{margin:0 0 4px;font-size:17px}
+.adm .meta{font-size:13px;color:#55626F;line-height:1.6}
+.adm .badge{display:inline-block;font-size:12px;font-weight:600;padding:2px 8px;border-radius:999px;background:#EEF1F4;margin-right:6px}
+.adm .badge.warn{background:#FDECEC;color:#8A1C24}
+.adm .badge.ok{background:#E8F5EC;color:#1F5130}
+.adm .lead form{display:flex;flex-direction:column;gap:8px}
+.adm .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+@media (max-width:900px){.adm .lead{grid-template-columns:1fr}}
