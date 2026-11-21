@@ -86,3 +86,5 @@ body:has(.ren){margin:0;background:#000}
 .ren header.top a.brandmark{display:flex;flex-direction:column;gap:6px;text-decoration:none}
 .ren header.top .tagline{color:#1d1a12;font-weight:700;font-size:1.05rem;letter-spacing:.06em;text-transform:uppercase;text-shadow:0 1px 0 rgba(255,255,255,.35)}
 @media (max-width:600px){.ren header.top .tagline{font-size:.85rem;letter-spacing:.04em}}
+.ren .hero p.promise{margin-top:16px;padding:12px 16px;border-left:4px solid #e3262b;background:rgba(255,255,255,.06);border-radius:8px;color:#f1f1f1;line-height:1.5}
+.ren .hero p.promise b{color:#fff}
