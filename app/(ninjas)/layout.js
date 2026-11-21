@@ -19,7 +19,7 @@ export default function NinjasLayout({ children }) {
       <Analytics id={b.gaId} />
       <header className="top">
         <div className="wrap">
-          <a href="/"><img className="logo" src={`${IMG}/logo.webp`} alt="Real Estate Ninjas" width="518" height="127" /></a>
+          <a href="/" className="brandmark"><img className="logo" src={`${IMG}/logo.webp`} alt="Real Estate Ninjas" width="518" height="127" /><span className="tagline">Find the sharpest agent in your area</span></a>
           <nav aria-label="Main">
             <a href="/#process">How it works</a>
             <a href="/#why">Why us</a>

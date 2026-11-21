@@ -82,3 +82,7 @@ body:has(.ren){margin:0;background:#000}
 .ren .btn:disabled{opacity:.6}
 .ren .trap{position:absolute;left:-9999px;width:1px;height:1px}
 @media (max-width:640px){.ren h1{font-size:40px}.ren h2.sec{font-size:30px}}
+
+.ren header.top a.brandmark{display:flex;flex-direction:column;gap:6px;text-decoration:none}
+.ren header.top .tagline{color:#1d1a12;font-weight:700;font-size:1.05rem;letter-spacing:.06em;text-transform:uppercase;text-shadow:0 1px 0 rgba(255,255,255,.35)}
+@media (max-width:600px){.ren header.top .tagline{font-size:.85rem;letter-spacing:.04em}}
