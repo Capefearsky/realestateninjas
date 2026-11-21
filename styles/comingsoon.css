@@ -1,0 +1,22 @@
+.cs{display:flex;flex-direction:column;min-height:100vh}
+.cs main{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:72px 24px;gap:20px}
+.cs h1{margin:0;font-size:clamp(40px,7vw,72px);line-height:1.05}
+.cs p{margin:0;font-size:18px;line-height:1.6;max-width:520px}
+.cs footer{padding:24px;text-align:center;font-size:14px}
+.cs-ren{background:#000;color:#E8ECF1;font-family:Inter,system-ui,sans-serif}
+.cs-ren header{background:linear-gradient(to top,#DDC481,#7E6B37)}
+.cs-ren header .in{max-width:1200px;margin:0 auto;padding:24px;display:flex;justify-content:center}
+.cs-ren header img.logo{width:518px;max-width:100%;height:auto;display:block}
+.cs-ren header img.edge{width:100%;height:auto;display:block}
+.cs-ren .cs-tag{background:#1B2A38;color:#FF3B3B;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:8px 14px;border-radius:999px}
+.cs-ren h1{color:#EC1C24;font-weight:700}
+.cs-ren p{color:#B7C3CF}
+.cs-ren footer{border-top:1px solid #22313F;color:#9AAABB}
+.cs-hl{color:#fff;font-family:"Helvetica Neue",Arial,sans-serif;background:linear-gradient(180deg,#4a2c0e 0%,#3b2410 50%,#12201C 100%)}
+.cs-hl main{gap:18px;text-shadow:0 1px 3px rgba(0,0,0,.45)}
+.cs-hl .cs-brand{font-size:clamp(28px,5vw,44px);font-weight:600}
+.cs-hl .cs-brand span{color:#C8873A}
+.cs-hl .cs-tag{text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;color:#C8873A;font-weight:600}
+.cs-hl h1{font-weight:500}
+.cs-hl p{font-size:1.15rem;opacity:.9}
+.cs-hl footer{background:#000;color:#cfd8d4;font-size:.88rem;padding:20px}

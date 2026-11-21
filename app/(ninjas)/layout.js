@@ -1,11 +1,18 @@
 import '@/styles/ninjas.css';
+import '@/styles/comingsoon.css';
+import ComingSoon, { PreviewBar } from '@/components/ComingSoon';
+import { canSeeFullSite } from '@/lib/preview';
+import { isLive } from '@/lib/brands';
+
+// Checked on every visit: the public sees Coming soon, Tony (signed in) sees the full site.
+export const dynamic = 'force-dynamic';
 import Analytics from '@/components/Analytics';
 import { BRANDS, BROKER_NAME } from '@/lib/brands';
 
 const IMG = '/img';
 const b = BRANDS.ninjas;
 
-export const metadata = {
+const fullMeta = {
   title: 'Real Estate Ninjas | Get Matched With a North Carolina Agent Who Gets You',
   description:
     'Buying or selling a home in North Carolina? Take a 2-minute questionnaire and Real Estate Ninjas will match you with one licensed local agent who fits your area and the way you live. Free, no obligation.',
@@ -13,9 +20,16 @@ export const metadata = {
   openGraph: { title: 'Real Estate Ninjas | An Agent Who Gets You', images: [`${IMG}/og-image.jpg`], siteName: 'Real Estate Ninjas' },
 };
 
-export default function NinjasLayout({ children }) {
+export async function generateMetadata() {
+  if (await canSeeFullSite()) return fullMeta;
+  return { title: 'Real Estate Ninjas | Coming Very Soon', description: 'Real Estate Ninjas is coming very soon.', icons: fullMeta.icons };
+}
+
+export default async function NinjasLayout({ children }) {
+  if (!(await canSeeFullSite())) return <ComingSoon brand="ninjas" />;
   return (
     <div className="ren">
+      {!isLive() && <PreviewBar />}
       <Analytics id={b.gaId} />
       <header className="top">
         <div className="wrap">

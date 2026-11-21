@@ -4,6 +4,7 @@ import { QUESTIONS } from '@/lib/questions';
 import { hasDb, sql, ensureSchema, overLimit, audit } from '@/lib/db';
 import { hasEmail, sendLeadEmails } from '@/lib/email';
 import { clientIp, hashIp, sameOrigin, verifyTurnstile } from '@/lib/security';
+import { canSeeFullSite } from '@/lib/preview';
 
 export const runtime = 'nodejs';
 
@@ -17,6 +18,7 @@ function bad(message, status = 400) {
 
 export async function POST(req) {
   if (!(await sameOrigin())) return bad('Please submit the form from our website.', 403);
+  if (!(await canSeeFullSite())) return bad('We’re not taking requests yet. Please check back soon.', 403);
 
   let body;
   try {
