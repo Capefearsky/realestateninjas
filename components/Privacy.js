@@ -1,4 +1,4 @@
-import { BRANDS } from '@/lib/brands';
+import { BRANDS, firmText } from '@/lib/brands';
 
 export default function Privacy({ brand, home }) {
   const b = BRANDS[brand];
@@ -6,7 +6,7 @@ export default function Privacy({ brand, home }) {
     <main className="doc">
       <h1>Privacy policy</h1>
       <p><small>Last updated November 21, 2026</small></p>
-      <p>{b.name} (“we,” “us”) runs {b.domain}. {b.firmLine}. This policy explains what we collect and what we do with it.</p>
+      <p>{b.name} (“we,” “us”) runs {b.domain}. {firmText(b)}. This policy explains what we collect and what we do with it.</p>
       <h2>What we collect</h2>
       <ul>
         <li><strong>What you give us:</strong> your name, email, phone number, the area you’re interested in, what you need help with, and the optional questionnaire answers you choose to give (such as lifestyle, hobbies and how you like to be contacted).</li>

@@ -7,7 +7,7 @@ import { isLive } from '@/lib/brands';
 // Checked on every visit: the public sees Coming soon, Tony (signed in) sees the full site.
 export const dynamic = 'force-dynamic';
 import Analytics from '@/components/Analytics';
-import { BRANDS, BROKER_NAME } from '@/lib/brands';
+import { BRANDS, firmText, brokerText } from '@/lib/brands';
 import { hlBase } from '@/lib/base';
 
 const b = BRANDS.hl;
@@ -46,7 +46,7 @@ export default async function HlLayout({ children }) {
       <footer>
         <div className="wrap">
           <span>
-            <strong>{b.firmLine}</strong> · Broker: {BROKER_NAME}. Estate sales, cleanouts and cash offers are provided by
+            <strong>{firmText(b)}</strong>{brokerText()}. Estate sales, cleanouts and cash offers are provided by
             independent partner companies; we may receive a referral fee, disclosed to you in writing. Equal Housing Opportunity.
           </span>
           <span><a href={`mailto:${b.contactEmail}`}>{b.contactEmail}</a> · <a href={`${base}/privacy`}>Privacy policy</a> · © 2026 HomeLiquidation.com</span>

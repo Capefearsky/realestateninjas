@@ -7,7 +7,7 @@ import { isLive } from '@/lib/brands';
 // Checked on every visit: the public sees Coming soon, Tony (signed in) sees the full site.
 export const dynamic = 'force-dynamic';
 import Analytics from '@/components/Analytics';
-import { BRANDS, BROKER_NAME } from '@/lib/brands';
+import { BRANDS, firmText, brokerText } from '@/lib/brands';
 
 const IMG = '/img';
 const b = BRANDS.ninjas;
@@ -50,12 +50,12 @@ export default async function NinjasLayout({ children }) {
           <div>
             <b>Real Estate Ninjas</b>
             <br />
-            {b.firmLine} · Broker: {BROKER_NAME} · Wilmington, NC
+            {firmText(b)}{brokerText()} · Wilmington, NC
             <br />
             <a href={`mailto:${b.contactEmail}`}>{b.contactEmail}</a>
           </div>
           <div style={{ maxWidth: 520 }}>
-            Real Estate Ninjas refers buyers and sellers to independently licensed agents and is paid a referral fee by the
+            Real Estate Ninjas will refer buyers and sellers to independently licensed agents and be paid a referral fee by the
             agent’s brokerage at closing. Equal Housing Opportunity.
           </div>
           <div>
