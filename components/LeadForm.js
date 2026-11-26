@@ -249,7 +249,7 @@ export default function LeadForm({ brand, base, questions, siteKey, title }) {
           </fieldset>
           <div className="row2">
             <label className="lbl">
-              City or ZIP of the property
+              City or ZIP of the property (NC or SC)
               <input className="fld" required placeholder="e.g. Wilmington" value={data.area} onChange={(e) => set('area', e.target.value)} />
             </label>
             {select('property_type', 'Property type', Q.property_type)}

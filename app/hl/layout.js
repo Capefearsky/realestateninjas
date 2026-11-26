@@ -13,8 +13,8 @@ import { hlBase } from '@/lib/base';
 const b = BRANDS.hl;
 
 const fullMeta = {
-  title: 'Home Liquidation | Estate Cleanouts & Home Sales in North Carolina',
-  description: 'Estates, downsizing and relocations across North Carolina: one coordinator for clearing out the contents and selling the house. Free, no-obligation call.',
+  title: 'Home Liquidation | Estate Cleanouts & Home Sales in North & South Carolina',
+  description: 'Estates, downsizing and relocations across North and South Carolina: one coordinator for clearing out the contents and selling the house. Free, no-obligation call.',
   openGraph: { title: 'Home Liquidation | Clear out the contents. Sell the house. One call.', images: ['/img/e06d1f4928.jpg'] },
 };
 

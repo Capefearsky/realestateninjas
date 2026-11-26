@@ -15,6 +15,7 @@ const FAQ = [
   ['The estate is still in probate. Can we start?', 'Usually you can plan and prepare now and time the sale with the executor’s authority. Your estate attorney has the final word.'],
   ['I live out of state. Do I need to be there?', 'Usually not. Walk-throughs, updates and most closings can be done remotely.'],
   ['Who does the estate sale, cleanout or cash offer?', 'Independent partner companies that contract with you directly. You choose whether to use them, and any fee we receive is disclosed to you in writing first.'],
+  ['What areas do you cover?', 'North Carolina and South Carolina, from the Outer Banks and Wilmington to Myrtle Beach, Charleston and Hilton Head, plus the Triangle, Charlotte and the mountains.'],
   ['What does it cost to talk to you?', 'Nothing. The first call and the plan are free, with no obligation.'],
 ];
 
@@ -25,7 +26,7 @@ export default async function HlHome() {
       <section className="hero" id="start">
         <div className="wrap">
           <div>
-            <div className="eyebrow">Estates · Downsizing · Relocations · North Carolina</div>
+            <div className="eyebrow">Estates · Downsizing · Relocations · North & South Carolina</div>
             <h1>Clear out the contents. Sell the house. One call.</h1>
             <p>When a home has to be emptied and sold, after a loss, a move or a change in life, we coordinate the whole thing: the belongings, the cleanout and the sale.</p>
             <ul className="checks">
@@ -50,7 +51,7 @@ export default async function HlHome() {
         <div className="wrap">
           <h2>How it works</h2>
           <ol className="steps">
-            <li><span className="num">01</span><h3>A first call</h3><p>We review North Carolina’s agency disclosure with you, then learn about the home, your deadline and what matters to the family.</p></li>
+            <li><span className="num">01</span><h3>A first call</h3><p>We review the required agency disclosure with you, then learn about the home, your deadline and what matters to the family.</p></li>
             <li><span className="num">02</span><h3>One written plan</h3><p>Side-by-side options for a cash offer and a market listing, plus a plan for the contents.</p></li>
             <li><span className="num">03</span><h3>It gets handled</h3><p>Estate sale, donations, haul-away, cleaning and closing, with updates you can follow from anywhere.</p></li>
           </ol>
