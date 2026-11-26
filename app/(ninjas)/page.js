@@ -5,6 +5,7 @@ const IMG = '/img';
 const AREAS = ['Wilmington', 'Leland', 'Wrightsville Beach', 'Carolina Beach', 'Kure Beach', 'Hampstead', 'Southport', 'Oak Island', 'Jacksonville', 'Topsail Beach', 'Raleigh', 'Durham', 'Chapel Hill', 'Cary', 'Charlotte', 'Lake Norman', 'Greensboro', 'Winston-Salem', 'Fayetteville', 'Asheville', 'Boone', 'Outer Banks'];
 const FAQ = [
   ['Does it cost anything to get matched?', 'No. Matching is free for buyers and sellers. The agent you’re matched with pays Real Estate Ninjas a referral fee only if your sale or purchase closes, and it doesn’t change what you pay.'],
+  ['Who are the agents?', 'Licensed North Carolina agents we know and vet personally, by invitation only. We look at local experience, reviews and how they treat people before anyone joins the network.'],
   ['Why do you ask about my hobbies and lifestyle?', 'Buying or selling a home is personal. After matching on area and local experience, we look for an agent who shares your interests and works the way you like to communicate.'],
   ['Why don’t you ask about my budget or timeline?', 'Those are personal details. North Carolina requires us to review the Working With Real Estate Agents disclosure with you before we talk about them, so we do that on our first call.'],
   ['Will my information be sold to a bunch of agents?', 'No. We don’t sell or auction your information. A person on our team reads your answers and introduces you to one agent picked for fit, not for who pays the most. If it isn’t a good match, just tell us and we’ll find someone else.'],
@@ -55,6 +56,49 @@ export default function Home() {
             <p className="muted" style={{ marginTop: 16 }}><b>No bidding wars for your info.</b> Many lead sites sell your contact details to whichever agents pay the most, so your phone rings off the hook. We don’t. A real person reads your answers and picks one agent for you, based on fit.</p>
             <p style={{ marginTop: 24 }}><a className="btnlink" href="#start">Take the quiz</a></p>
           </div>
+        </div>
+      </section>
+
+      <section id="common-ground" className="band">
+        <div className="wrap">
+          <span className="eyebrow">Common-ground matching</span>
+          <h2 className="sec">Your agent should get you, not just your ZIP code.</h2>
+          <p className="muted" style={{ maxWidth: 720 }}>Every Ninja agent knows their market. Then we go a step further and look for the thing you have in common, because a home search goes better with someone you actually like talking to.</p>
+          <div className="cg">
+            <div className="tile"><b>Golf</b><h3>Buying near the course?</h3><p>Meet an agent who plays it, knows which communities have the best tee times, and can tell you about the HOA dues over 18 holes.</p></div>
+            <div className="tile"><b>Boating and fishing</b><h3>Need a deep-water dock?</h3><p>Your agent knows the tides, the ramps and the bridges your boat clears, because they’re out there on weekends too.</p></div>
+            <div className="tile"><b>Game day</b><h3>Tar Heels, Pack or Panthers?</h3><p>Rivalries welcome. A shared team makes every showing a little easier, and someone will know the best spot to watch the game.</p></div>
+            <div className="tile"><b>Your work</b><h3>Nurse, contractor or veteran?</h3><p>Agents who understand shift schedules, PCS moves or what a solid foundation looks like, because they’ve lived it.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="promise" className="plain">
+        <div className="wrap">
+          <span className="eyebrow">Our promise</span>
+          <h2 className="sec">We don’t give your info to the highest bidder.</h2>
+          <p className="muted" style={{ maxWidth: 720 }}>Many lead sites auction your phone number to whoever pays the most. That’s why one form can mean ten calls before lunch. We match you on purpose, one agent at a time.</p>
+          <div className="vs">
+            <div className="them">
+              <h3>Typical lead sites</h3>
+              <ul>
+                <li>Your info is sold to several agents at once</li>
+                <li>The agent who pays the most gets you</li>
+                <li>Your phone rings nonstop</li>
+                <li>Nobody asks what you’re actually like</li>
+              </ul>
+            </div>
+            <div className="us">
+              <h3>Real Estate Ninjas</h3>
+              <ul>
+                <li>A real person reads your answers</li>
+                <li>One hand-picked agent, matched for fit</li>
+                <li>Contact the way you choose: text, call or email</li>
+                <li>Not the right fit? We’ll find someone else, free</li>
+              </ul>
+            </div>
+          </div>
+          <p style={{ marginTop: 28 }}><a className="btnlink" href="#start">Find my match</a></p>
         </div>
       </section>
 

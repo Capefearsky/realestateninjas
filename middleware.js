@@ -24,7 +24,7 @@ async function signedIn(req) {
 }
 
 // One app, two domains. homeliquidation.com is served from the /hl pages.
-// Until SITE_LIVE=true, the public only sees "Coming very soon"; Tony sees everything while signed in to Ninjas HQ.
+// Full pages are public. SITE_HIDDEN=true puts the old "Coming very soon" screen back.
 export async function middleware(req) {
   const host = (req.headers.get('host') || '').toLowerCase();
   const { pathname } = req.nextUrl;
@@ -33,7 +33,9 @@ export async function middleware(req) {
   const adminArea = pathname.startsWith('/admin') || pathname.startsWith('/api/admin');
   const shared = assets || adminArea || pathname.startsWith('/api');
 
-  if (process.env.SITE_LIVE !== 'true' && !assets && !adminArea && pathname !== '/coming-soon' && !(await signedIn(req))) {
+  // SITE_HIDDEN=true is the kill switch: the public sees "Coming very soon" again and sign-ups pause.
+  // Otherwise the full site is public (with a Coming Soon banner until SITE_LIVE=true) and sign-ups are open.
+  if (process.env.SITE_HIDDEN === 'true' && !assets && !adminArea && pathname !== '/coming-soon' && !(await signedIn(req))) {
     if (pathname.startsWith('/api')) {
       return NextResponse.json({ ok: false, error: 'We’re not taking requests yet. Please check back soon.' }, { status: 403 });
     }

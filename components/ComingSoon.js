@@ -34,10 +34,20 @@ export default function ComingSoon({ brand }) {
   );
 }
 
-export function PreviewBar() {
+const BANNER = {
+  ninjas: { a: 'Coming soon', b: 'We’re hand-picking our first Ninja agents across North Carolina. Take the quiz now and you’ll be first in line for a match.', cta: 'Get on the list', href: '/#start' },
+  hl: { a: 'Coming soon', b: 'We’re lining up our North Carolina partner network. Request your free call now and you’ll be first in line when we open.', cta: 'Get on the list', href: '#start' },
+};
+
+// Public banner shown at the top of every page until SITE_LIVE=true.
+export function PreviewBar({ brand = 'ninjas', href }) {
+  const t = BANNER[brand] || BANNER.ninjas;
+  const hl = brand === 'hl';
   return (
-    <div style={{ background: '#111', color: '#ffd166', fontSize: 13, textAlign: 'center', padding: '6px 12px', fontFamily: 'system-ui, sans-serif' }}>
-      Preview: only you can see this page. The public sees “Coming very soon” until launch. <a href="/admin" style={{ color: '#fff' }}>Ninjas HQ</a>
+    <div role="region" aria-label="Coming soon" style={{ position: 'sticky', top: 0, zIndex: 60, background: hl ? '#C8873A' : 'linear-gradient(90deg,#EC1C24,#FF3B3B)', color: '#fff', fontSize: 14, textAlign: 'center', padding: '9px 16px', fontFamily: 'Inter, system-ui, sans-serif', lineHeight: 1.4 }}>
+      <strong style={{ textTransform: 'uppercase', letterSpacing: '.08em', marginRight: 8, background: 'rgba(0,0,0,.22)', padding: '2px 8px', borderRadius: 999, fontSize: 12 }}>{t.a}</strong>
+      <span>{t.b}</span>{' '}
+      <a href={href || t.href} style={{ color: '#fff', fontWeight: 700, textDecoration: 'underline', marginLeft: 4 }}>{t.cta} →</a>
     </div>
   );
 }

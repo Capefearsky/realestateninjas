@@ -54,7 +54,10 @@ export async function POST(req) {
       ? {
           lifestyle: pickMany(body.lifestyle, Q.lifestyle),
           hobbies: pickMany(body.hobbies, Q.hobbies),
-          hobbies_other: clean(body.hobbies_other, 120),
+          hobbies_other: clean(body.hobbies_other, 160),
+          teams: clean(body.teams, 120),
+          work: clean(body.work, 120),
+          match_priority: pick(body.match_priority, Q.match_priority),
           pace: pick(body.pace, Q.pace),
         }
       : {

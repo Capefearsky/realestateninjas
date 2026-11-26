@@ -29,7 +29,7 @@ export default async function HlLayout({ children }) {
   const home = base || '/';
   return (
     <div className="hlw">
-      {!isLive() && <PreviewBar />}
+      {!isLive() && <PreviewBar brand="hl" href={`${base}/#start`} />}
       <Analytics id={b.gaId} />
       <header className="top">
         <div className="wrap">

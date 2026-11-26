@@ -5,7 +5,7 @@ import { CONSENT_TEXT, WWREA_URL } from '@/lib/brands';
 // One form component for both brands. The questions come from lib/questions.js.
 export default function LeadForm({ brand, base, questions, siteKey, title }) {
   const Q = questions;
-  const steps = brand === 'ninjas' ? ['Your move', 'Your style', 'Your details'] : ['Your details'];
+  const steps = brand === 'ninjas' ? ['Your move', 'Your style', 'Common ground', 'Your details'] : ['Your details'];
   const [step, setStep] = useState(0);
   const [data, setData] = useState({
     goal: Q.goal[0],
@@ -13,6 +13,9 @@ export default function LeadForm({ brand, base, questions, siteKey, title }) {
     lifestyle: [],
     hobbies: [],
     hobbies_other: '',
+    teams: '',
+    work: '',
+    match_priority: Q.match_priority ? Q.match_priority[0] : '',
     pace: Q.pace ? Q.pace[0] : '',
     contact_pref: Q.contact_pref[0],
     property_type: Q.property_type ? Q.property_type[0] : '',
@@ -204,16 +207,36 @@ export default function LeadForm({ brand, base, questions, siteKey, title }) {
               {chips('lifestyle', Q.lifestyle, true)}
             </fieldset>
             <fieldset className="q">
-              <legend>What do you love to do? <small>Pick any</small></legend>
-              {chips('hobbies', Q.hobbies, true)}
-              <input className="fld" placeholder="Something else? Tell us" aria-label="Other hobbies" maxLength={120} value={data.hobbies_other} onChange={(e) => set('hobbies_other', e.target.value)} />
+              <legend>What do you love to do? <small>Pick any. This is how we find your common ground.</small></legend>
+              {(Q.hobbyGroups || [['', Q.hobbies]]).map(([label, list]) => (
+                <div key={label || 'all'} className="ggroup">
+                  {label ? <p className="glbl">{label}</p> : null}
+                  {chips('hobbies', list, true)}
+                </div>
+              ))}
             </fieldset>
-            <div className="row2">
-              {select('contact_pref', 'Best way to reach you', Q.contact_pref)}
-              {select('pace', 'Your pace', Q.pace)}
-            </div>
           </div>
           <div data-step="2" hidden={step !== 2} className="stepbox">
+            <p className="hint">Optional, but this is where the magic happens. The more we know, the better the match.</p>
+            <label className="lbl">
+              Favorite teams <small>(college or pro)</small>
+              <input className="fld" placeholder="e.g. UNC Tar Heels, Carolina Panthers, Hurricanes" maxLength={120} value={data.teams} onChange={(e) => set('teams', e.target.value)} />
+            </label>
+            <label className="lbl">
+              Your line of work <small>(or what you did before retiring)</small>
+              <input className="fld" placeholder="e.g. nurse, contractor, teacher, military, small-business owner" maxLength={120} value={data.work} onChange={(e) => set('work', e.target.value)} />
+            </label>
+            <label className="lbl">
+              Anything else you’d love to have in common with your agent?
+              <input className="fld" placeholder="e.g. offshore fishing, restoring old trucks, a good BBQ joint" aria-label="Other common ground" maxLength={160} value={data.hobbies_other} onChange={(e) => set('hobbies_other', e.target.value)} />
+            </label>
+            <div className="row2">
+              {select('match_priority', 'How much does common ground matter?', Q.match_priority)}
+              {select('contact_pref', 'Best way to reach you', Q.contact_pref)}
+            </div>
+            {select('pace', 'How do you like to see homes or offers?', Q.pace)}
+          </div>
+          <div data-step="3" hidden={step !== 3} className="stepbox">
             {contactFields}
             {finalBits}
           </div>

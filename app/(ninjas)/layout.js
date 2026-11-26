@@ -29,7 +29,7 @@ export default async function NinjasLayout({ children }) {
   if (!(await canSeeFullSite())) return <ComingSoon brand="ninjas" />;
   return (
     <div className="ren">
-      {!isLive() && <PreviewBar />}
+      {!isLive() && <PreviewBar brand="ninjas" />}
       <Analytics id={b.gaId} />
       <header className="top">
         <div className="wrap">
