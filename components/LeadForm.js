@@ -159,8 +159,8 @@ export default function LeadForm({ brand, base, questions, siteKey, title }) {
         <span>{CONSENT_TEXT} See our <a href={`${base}/privacy`}>privacy policy</a>.</span>
       </label>
       <p className="wwrea">
-        <strong>About your privacy:</strong> please don’t share price, finances or personal reasons here. North Carolina
-        requires us to review the <em>Working With Real Estate Agents</em> disclosure with you first, and we’ll do that on
+        <strong>About your privacy:</strong> please don’t share price, finances or personal reasons here. We’re required to
+        review a short agency disclosure with you first (in NC, <em>Working With Real Estate Agents</em>), and we’ll do that on
         our first call. You can read it now at <a href={WWREA_URL} target="_blank" rel="noopener noreferrer">ncrec.gov</a>{' '}
         (Publications &gt; Disclosure Forms).
       </p>
@@ -197,7 +197,7 @@ export default function LeadForm({ brand, base, questions, siteKey, title }) {
               </div>
             </fieldset>
             <label className="lbl">
-              City or ZIP in North Carolina
+              City or ZIP (NC or SC)
               <input className="fld" required placeholder="e.g. Wilmington" value={data.area} onChange={(e) => set('area', e.target.value)} />
             </label>
           </div>
@@ -220,7 +220,7 @@ export default function LeadForm({ brand, base, questions, siteKey, title }) {
             <p className="hint">Optional, but this is where the magic happens. The more we know, the better the match.</p>
             <label className="lbl">
               Favorite teams <small>(college or pro)</small>
-              <input className="fld" placeholder="e.g. UNC Tar Heels, Carolina Panthers, Hurricanes" maxLength={120} value={data.teams} onChange={(e) => set('teams', e.target.value)} />
+              <input className="fld" placeholder="e.g. UNC Tar Heels, Clemson, Gamecocks, Panthers" maxLength={120} value={data.teams} onChange={(e) => set('teams', e.target.value)} />
             </label>
             <label className="lbl">
               Your line of work <small>(or what you did before retiring)</small>

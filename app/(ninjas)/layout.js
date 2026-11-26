@@ -13,9 +13,9 @@ const IMG = '/img';
 const b = BRANDS.ninjas;
 
 const fullMeta = {
-  title: 'Real Estate Ninjas | Get Matched With a North Carolina Agent Who Gets You',
+  title: 'Real Estate Ninjas | Get Matched With a Carolinas Agent Who Gets You',
   description:
-    'Buying or selling a home in North Carolina? Take a 2-minute questionnaire and Real Estate Ninjas will match you with one licensed local agent who fits your area and the way you live. Free, no obligation.',
+    'Buying or selling a home in North or South Carolina? Take a 2-minute questionnaire and Real Estate Ninjas will match you with one licensed local agent who fits your area and the way you live. Free, no obligation.',
   icons: { icon: '/favicon.png', apple: `${IMG}/apple-touch-icon.png` },
   openGraph: { title: 'Real Estate Ninjas | An Agent Who Gets You', images: [`${IMG}/og-image.jpg`], siteName: 'Real Estate Ninjas' },
 };

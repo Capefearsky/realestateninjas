@@ -35,7 +35,7 @@ export default function ComingSoon({ brand }) {
 }
 
 const BANNER = {
-  ninjas: { a: 'Coming soon', b: 'We’re hand-picking our first Ninja agents across North Carolina. Take the quiz now and you’ll be first in line for a match.', cta: 'Get on the list', href: '/#start' },
+  ninjas: { a: 'Coming soon', b: 'We’re hand-picking our first Ninja agents across North and South Carolina. Take the quiz now and you’ll be first in line for a match.', cta: 'Get on the list', href: '/#start' },
   hl: { a: 'Coming soon', b: 'We’re lining up our North Carolina partner network. Request your free call now and you’ll be first in line when we open.', cta: 'Get on the list', href: '#start' },
 };
 
