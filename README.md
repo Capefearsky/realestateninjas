@@ -15,8 +15,8 @@ One Next.js app that runs **realestateninjas.com** and **homeliquidation.com** f
 | `SESSION_SECRET` | 32+ random characters; signs admin sessions and encrypts the two-step key |
 | `ADMIN_PASSWORD` | Tony's admin password (12+ characters) |
 | `RESEND_API_KEY` | Email sending |
-| `EMAIL_FROM_NINJAS` | e.g. `Real Estate Ninjas <hello@realestateninjas.com>` |
-| `EMAIL_FROM_HL` | e.g. `Home Liquidation <hello@homeliquidation.com>` |
+| `EMAIL_FROM_NINJAS` | e.g. `Real Estate Ninjas <match@realestateninjas.com>` |
+| `EMAIL_FROM_HL` | e.g. `Home Liquidation <help@homeliquidation.com>` |
 | `NOTIFY_EMAIL` | where new-lead alerts go |
 | `NEXT_PUBLIC_TURNSTILE_SITE_KEY`, `TURNSTILE_SECRET_KEY` | Cloudflare Turnstile bot check |
 | `SITE_LIVE` | set to `true` at launch to let search engines index the sites |

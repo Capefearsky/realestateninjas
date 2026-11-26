@@ -49,7 +49,7 @@ export default async function HlLayout({ children }) {
             <strong>{b.firmLine}</strong> · Broker: {BROKER_NAME}. Estate sales, cleanouts and cash offers are provided by
             independent partner companies; we may receive a referral fee, disclosed to you in writing. Equal Housing Opportunity.
           </span>
-          <span><a href={`${base}/privacy`}>Privacy policy</a> · © 2026 HomeLiquidation.com</span>
+          <span><a href={`mailto:${b.contactEmail}`}>{b.contactEmail}</a> · <a href={`${base}/privacy`}>Privacy policy</a> · © 2026 HomeLiquidation.com</span>
         </div>
       </footer>
     </div>

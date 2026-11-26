@@ -51,6 +51,8 @@ export default async function NinjasLayout({ children }) {
             <b>Real Estate Ninjas</b>
             <br />
             {b.firmLine} · Broker: {BROKER_NAME} · Wilmington, NC
+            <br />
+            <a href={`mailto:${b.contactEmail}`}>{b.contactEmail}</a>
           </div>
           <div style={{ maxWidth: 520 }}>
             Real Estate Ninjas refers buyers and sellers to independently licensed agents and is paid a referral fee by the

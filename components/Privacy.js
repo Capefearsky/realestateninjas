@@ -24,7 +24,7 @@ export default function Privacy({ brand, home }) {
       <h2>Your choices</h2>
       <ul>
         <li>Unsubscribe from emails at any time, or reply STOP to any text.</li>
-        <li>Ask us to see, correct or delete your information by emailing <a href="mailto:tony@tonybrooksward.com">tony@tonybrooksward.com</a>.</li>
+        <li>Ask us to see, correct or delete your information by emailing <a href={`mailto:${b.contactEmail}`}>{b.contactEmail}</a>.</li>
         <li>Block or delete cookies in your browser settings.</li>
       </ul>
       <h2>Keeping it safe</h2>

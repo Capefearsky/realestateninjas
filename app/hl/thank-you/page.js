@@ -16,6 +16,7 @@ export default async function ThankYou() {
         <li><strong>We review North Carolina’s Working With Real Estate Agents disclosure</strong> with you first. You can read it now at <a href={WWREA_URL} target="_blank" rel="noopener noreferrer">ncrec.gov</a> (Publications &gt; Disclosure Forms).</li>
         <li><strong>We put together your written plan</strong>, with no obligation.</li>
       </ol>
+      <p>Questions before then? Email <a href="mailto:help@homeliquidation.com">help@homeliquidation.com</a>.</p>
       <p><a className="btn" href={base || '/'}>Back to home</a></p>
     </main>
   );

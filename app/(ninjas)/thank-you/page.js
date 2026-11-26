@@ -14,6 +14,7 @@ export default function ThankYou() {
         <li><strong>We review North Carolina’s Working With Real Estate Agents disclosure</strong> with you, then talk about your plans. You can read it now at <a href={WWREA_URL} target="_blank" rel="noopener noreferrer">ncrec.gov</a> (Publications &gt; Disclosure Forms).</li>
         <li><strong>We introduce your matched agent.</strong> If it’s not the right fit, tell us and we’ll find someone else.</li>
       </ol>
+      <p>Questions before then? Email <a href="mailto:match@realestateninjas.com">match@realestateninjas.com</a>.</p>
       <p><a className="btnlink" href="/">Back to home</a></p>
     </main>
   );
