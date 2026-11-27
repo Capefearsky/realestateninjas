@@ -102,3 +102,15 @@ body:has(.ren){margin:0;background:#000}
 .ren .vs ul{margin:0;padding-left:18px;color:var(--mute);line-height:1.8}
 .ren .vs .us li::marker{color:var(--hot)}
 @media(max-width:760px){.ren .vs{grid-template-columns:1fr}}
+.ren .guide .lede{font-size:19px;color:#fff}
+.ren .guide .byline,.ren .guide .crumbs{font-size:13px;color:#7A8794}
+.ren .guide .crumbs a{color:#9FB0BF}
+.ren .guide ul{padding-left:20px}
+.ren .guide a{color:#FF6B6B}
+.ren .draftnote{background:#3a2a00;color:#ffd166;border-left:3px solid #ffd166;padding:8px 12px;border-radius:6px;font-size:14px}
+.ren .fine{font-size:13px;color:#7A8794;margin-top:24px}
+.ren .guidecta{margin-top:40px;background:#0B141C;border:1px solid #22313F;border-radius:16px;padding:28px}
+.ren .guidecta h2{margin-top:0}
+.ren .guidelist{list-style:none;padding:0;display:grid;gap:12px}
+.ren .guidelist a{display:block;background:#0B141C;border:1px solid #22313F;border-radius:12px;padding:18px 20px;color:#fff;text-decoration:none}
+.ren .guidelist small{display:block;color:#9FB0BF;margin-top:4px}
