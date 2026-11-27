@@ -77,3 +77,12 @@ body:has(.hlw){margin:0;background:#F6F2EA}
 .hlw .guidelist{list-style:none;padding:0;display:grid;gap:12px}
 .hlw .guidelist a{display:block;background:#fff;border:1px solid #e3dccd;border-radius:12px;padding:18px 20px;color:inherit;text-decoration:none}
 .hlw .guidelist small{display:block;opacity:.7;margin-top:4px}
+
+.guide img{max-width:100%;height:auto;border-radius:12px;display:block}
+.guide .hero-img{margin:20px 0 8px}
+.guide figure{margin:18px 0}
+.guide figcaption{font-size:13px;opacity:.7;margin-top:6px}
+.guide .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.guide .gallery figure{margin:0}
+.guide .gallery img{aspect-ratio:4/3;object-fit:cover;width:100%}
+@media(max-width:640px){.guide .gallery{grid-template-columns:1fr}}

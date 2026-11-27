@@ -12,6 +12,7 @@ export default function Guide({ g, base, cta }) {
     description: g.description,
     dateModified: g.updated,
     mainEntityOfPage: url,
+    image: g.hero ? [`https://${b.domain}${g.hero.src}`] : undefined,
     author: { '@type': 'Person', name: BROKER_NAME, description: AUTHOR.short },
     publisher: { '@type': 'Organization', name: b.name, url: `https://${b.domain}` },
   };
@@ -23,11 +24,14 @@ export default function Guide({ g, base, cta }) {
       <h1>{g.title}</h1>
       <p className="lede">{g.lede}</p>
       <p className="byline">By {AUTHOR.name} · {AUTHOR.short} · Updated {g.updatedText}</p>
+      {g.hero && <img className="hero-img" src={g.hero.src} alt={g.hero.alt} width="1600" height="1200" />}
       {g.sections.map((s) => (
         <section key={s.h}>
           <h2>{s.h}</h2>
           {(s.p || []).map((t, i) => <p key={i}>{t}</p>)}
+          {s.img && <figure><img src={s.img.src} alt={s.img.alt} width="1600" height="1200" loading="lazy" />{s.img.caption && <figcaption>{s.img.caption}</figcaption>}</figure>}
           {s.list && <ul>{s.list.map((t, i) => <li key={i}>{t}</li>)}</ul>}
+          {s.gallery && <div className="gallery">{s.gallery.map((im) => <figure key={im.src}><img src={im.src} alt={im.alt} loading="lazy" />{im.caption && <figcaption>{im.caption}</figcaption>}</figure>)}</div>}
           {s.tip && !isLive() && <p className="draftnote">Tony: {s.tip}</p>}
         </section>
       ))}
